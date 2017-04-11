@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\Documents\School\CMPS121\kitchen_timer\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="D:\Documents\School\CMPS121\kitchen_timer\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_4d0cd9a9d91413f9d99d3bf75ae3e8a448acb6fc\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\Documents\School\CMPS121\kitchen_timer\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="5f9fdd2f627c8b828deafb8a35caed165c642a89">
+        <dex dex="D:\Documents\School\CMPS121\kitchen_timer\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_86ef2db72931c7287dacf64156a4d68f164c96b0\classes.dex" />
+    </item>
+
+</items>
