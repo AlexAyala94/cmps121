@@ -3,7 +3,7 @@ CMPS121: Mobile Applications with Prof. Luca de Alfaro
 
 UCSC Spring 2017
 
-# branches
+## branches
 
 linux branch for when I'm on my laptop
 
