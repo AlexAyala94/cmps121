@@ -1,3 +1,7 @@
+/*
+    Ryan Shee (rshee)
+    Homework 1
+*/
 package com.dealfaro.luca.KitchenTImer;
 
 import android.os.CountDownTimer;
