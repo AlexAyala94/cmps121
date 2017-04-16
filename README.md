@@ -10,3 +10,5 @@ linux branch for when I'm on my laptop
 windows branch for when I'm on my desktop
 
 windows merges with master
+
+pretty sure that shouldn't be necessary
