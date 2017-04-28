@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">BackAndForthStudio</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_activity_hello">Hello, you are in the first activity.</string>
+    <string name="gostring">Go</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="second_activity_hello">Hello, you are in the second activity.</string>
+    <string name="third_activity_hello">Hello, you are in the third activity.</string>
+    <string name="back">Back</string>
+    <string name="save">Enter</string>
+</resources>
