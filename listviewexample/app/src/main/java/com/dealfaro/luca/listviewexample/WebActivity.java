@@ -33,12 +33,11 @@ public class WebActivity extends AppCompatActivity {
             }
             // Otherwise, the link is not for a page on my site,
             // so launch another Activity that handles URLs
-            Log.wtf(LOG_TAG, "not same host: " + Uri.parse(url).getHost());
+            Log.wtf(LOG_TAG, "different host: " + Uri.parse(url).getHost());
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             startActivity(intent);
             return true;
         }
-
     }
 
     @Override
@@ -48,7 +47,7 @@ public class WebActivity extends AppCompatActivity {
         Bundle bundle = getIntent().getExtras();
         String url = bundle.getString("url"); // looks for url in the bundle
         Log.wtf(LOG_TAG, "uri: " + Uri.parse(url).getHost());
-        ogUrl = url;
+        ogUrl = url; // sets ogUrl to URL of site (because host URL might change)
         webView = (WebView) findViewById(R.id.webview2);
         webView.setWebViewClient(new MyWebViewClient());
         WebSettings webSettings = webView.getSettings();
@@ -73,17 +72,8 @@ public class WebActivity extends AppCompatActivity {
         }
     }
 
-    // proper back button in WebView
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (event.getAction() == KeyEvent.ACTION_DOWN) {
-            switch (keyCode) {
-                case KeyEvent.KEYCODE_BACK:
-                    if (webView.canGoBack()) {webView.goBack();}
-                    else {finish();}
-                    return true;
-            }
-
-        }
-        return super.onKeyDown(keyCode, event);
+    public void onBackPressed() {
+        if (webView.canGoBack()) {webView.goBack();}
+        else {super.onBackPressed();}
     }
 }
