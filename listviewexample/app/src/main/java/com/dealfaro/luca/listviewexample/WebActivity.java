@@ -19,12 +19,13 @@ import java.lang.reflect.Method;
 
 public class WebActivity extends AppCompatActivity {
     WebView webView;
+    String ogUrl; // stores original URL to compare with MyWebViewClient's current URL
 
     private class MyWebViewClient extends WebViewClient {
         @Override
         public boolean shouldOverrideUrlLoading(WebView view, String url) {
-            Log.wtf("lv-ex", "url changed " + url);
-            if (url.contains(Uri.parse(url).getHost())) {
+//            Log.wtf("lv-ex", "url changed " + url);
+            if (ogUrl.contains(Uri.parse(url).getHost())) {
                 Log.wtf("lv-ex", "same host");
                 // This is my web site, so do not override; let my WebView load the page
                 return false;
@@ -47,6 +48,7 @@ public class WebActivity extends AppCompatActivity {
         String url = bundle.getString("url"); // looks for url in the bundle
         Log.wtf("lv-ex", "url: " + url);
         Log.wtf("lv-ex", "uri: " + Uri.parse(url).getHost());
+        ogUrl = url;
         webView = (WebView) findViewById(R.id.webview2);
         webView.setWebViewClient(new MyWebViewClient());
         WebSettings webSettings = webView.getSettings();
